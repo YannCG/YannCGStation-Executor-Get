@@ -1,0 +1,437 @@
+/* SpaceX Tech Style - Minimalist, Futuristic, Dark Theme */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #000;
+    color: #fff;
+    position: relative;
+}
+
+/* Particle container */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+header {
+    text-align: center;
+    padding: 4rem 0 2rem;
+    position: relative;
+}
+
+header h1 {
+    font-size: 4rem;
+    letter-spacing: 8px;
+    background: linear-gradient(90deg, #fff, #00bcd4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 30px rgba(0, 188, 212, 0.5);
+    animation: pulse 2s infinite;
+}
+
+.language-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.lang-btn {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 0.9rem;
+    backdrop-filter: blur(5px);
+}
+
+.lang-btn:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+}
+
+.lang-btn.active {
+    background: rgba(0, 188, 212, 0.2);
+    border-color: #00bcd4;
+    color: #00bcd4;
+}
+
+/* Main content */
+main {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hide text content as requested - but keep structure for translation */
+section {
+    padding: 3rem 0;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #00bcd4;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: #00bcd4;
+    margin: 1rem auto 0;
+    position: relative;
+}
+
+/* Tech Grid (Achievements) */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tech-card {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 188, 212, 0.2);
+    border-radius: 15px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg:
+        transparent,
+        rgba(0, 188, 212, 0.05),
+        transparent
+    );
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.tech-card:hover::before {
+    transform: translateX(100%);
+}
+
+.tech-card:hover {
+    border-color: #00bcd4;
+    background: rgba(0, 188, 212, 0.05);
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.3);
+}
+
+.tech-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    filter: drop-shadow(0 0 10px rgba(0, 188, 212, 0.5));
+}
+
+.tech-card h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* Publications Grid */
+.publications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pub-card {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 188, 212, 0.3);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: left;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.pub-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #00bcd4;
+    transform: scaleY(0);
+    transition: transform 0.4s ease;
+    transform-origin: bottom;
+}
+
+.pub-card:hover::before {
+    transform: scaleY(1);
+}
+
+.pub-card:hover {
+    border-color: #00bcd4;
+    background: rgba(0, 188, 212, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 188, 212, 0.2);
+}
+
+.pub-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+    color: #00bcd4;
+}
+
+.pub-card h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.pub-card p {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.pub-link {
+    color: #00bcd4;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.pub-link:hover {
+    color: #00e5ff;
+    text-decoration: underline;
+}
+
+/* Mission section */
+#mission {
+    text-align: center;
+    padding: 5rem 0;
+    background: radial-gradient(circle at center, rgba(0,0,0,0.8) 0%, #000 70%);
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-visual {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.mars-colony {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #8b0000 0%, #5d0000 70%);
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+    position: relative;
+    box-shadow: 0 0 20px rgba(139, 0, 0, 0.5);
+    animation: float 3s ease-in-out infinite;
+}
+
+.mars-colony::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: #ff6b35;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 107, 53, 0.7);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+footer p {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.footer-decoration {
+    width: 60px;
+    height: 2px;
+    background: #00bcd4;
+    margin: 1rem auto 0;
+    position: relative;
+}
+
+/* Rocket silhouette */
+.rocket-silhouette {
+    width: 120px;
+    height: 200px;
+    background: linear-gradient(
+        to bottom:
+        transparent 0%,
+        rgba(255,255,255,0.1) 30%,
+        rgba(255,255,255,0.2) 50%,
+        rgba(255,255,255,0.1) 70%:
+        transparent 100%
+    );
+    margin: 2rem auto;
+    border-radius: 50% 50% 10% 10% / 30% 30% 70% 70%;
+    position: relative;
+    animation: rocketPulse 3s ease-in-out infinite;
+}
+
+.rocket-silhouette::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 20px;
+    background: linear-gradient(to top, #ff6b35, #ffa500);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 107, 53, 0.7);
+    animation: rocketFire 0.5s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 0 0 30px rgba(0, 188, 212, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 50px rgba(0, 188, 212, 0.8);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes rocketPulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(0, 188, 212, 0.5);
+    }
+}
+
+@keyframes rocketFire {
+    0%, 100% {
+        height: 20px;
+        opacity: 0.7;
+    }
+    50% {
+        height: 30px;
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.8rem;
+        letter-spacing: 4px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .tech-card, .pub-card {
+        padding: 1.5rem;
+    }
+
+    .tech-icon {
+        font-size: 2.5rem;
+    }
+
+    .tech-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .pub-icon {
+        font-size: 2rem;
+    }
+
+    .pub-card h3 {
+        font-size: 1.2rem;
+    }
+}

